@@ -1,0 +1,38 @@
+{
+  "acsm": {
+    "title": "ACSM: Progression models in resistance training for healthy adults (2009)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+    "type": "position_stand",
+    "scope": "اصول عمومی پیشرفت؛ تأیید یک برنامه اختصاصی Atlas نیست"
+  },
+  "nsca": {
+    "title": "NSCA: Determination of Resistance Training Frequency",
+    "url": "https://www.nsca.com/education/articles/kinetic-select/determination-of-resistance-training-frequency/",
+    "type": "professional_guidance",
+    "scope": "تواتر، ریکاوری و تقسیم بالاتنه/پایین‌تنه"
+  },
+  "phul": {
+    "title": "Brandon Campbell: Power Hypertrophy Upper Lower",
+    "url": "https://www.muscleandstrength.com/workouts/phul-workout",
+    "type": "author_program",
+    "scope": "ساختار چهارروزه PHUL؛ مقاله مربی، نه کارآزمایی متد"
+  },
+  "wendler": {
+    "title": "Jim Wendler: 5/3/1 for Hardgainers",
+    "url": "https://www.jimwendler.com/blogs/jimwendler-com/5-3-1-for-hardgainers",
+    "type": "author_program",
+    "scope": "اصول TM و درصدهای چرخه؛ نمونه Hardgainers، نه نسخه کامل کتاب"
+  },
+  "wendler_beginner": {
+    "title": "Jim Wendler: 5/3/1 for a Beginner",
+    "url": "https://www.jimwendler.com/blogs/jimwendler-com/101065094-5-3-1-for-a-beginner",
+    "type": "author_program",
+    "scope": "TM محافظه‌کارانه و کیفیت تکرار"
+  },
+  "gvt": {
+    "title": "Effects of a 12-Week Modified German Volume Training Program (2018)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5969184/",
+    "type": "pilot_trial",
+    "scope": "شرح GVT و مقایسه ۵ و ۱۰ ست؛ نمونه کوچک، بدون اثبات برتری ۱۰ ست"
+  }
+}

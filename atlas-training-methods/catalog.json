@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "default": "atlas_adaptive",
+  "methods": [
+    {
+      "id": "full_body",
+      "label_fa": "تمام‌بدن | Full Body",
+      "description_fa": "تمرین کل بدن در هر جلسه؛ مناسب شروع و زمان محدود.",
+      "days_per_week": [
+        2,
+        3
+      ],
+      "experience": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/full_body.json",
+      "requires_opt_in": false,
+      "requires_training_max": false
+    },
+    {
+      "id": "upper_lower",
+      "label_fa": "بالاتنه / پایین‌تنه | Upper Lower",
+      "description_fa": "تقسیم متعادل عضله‌سازی و قدرت در چهار جلسه.",
+      "days_per_week": [
+        4
+      ],
+      "experience": [
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/upper_lower.json",
+      "requires_opt_in": false,
+      "requires_training_max": false
+    },
+    {
+      "id": "ppl",
+      "label_fa": "فشاری / کششی / پا | PPL",
+      "description_fa": "تفکیک جلسات بر اساس الگوی حرکت؛ سه یا شش روز.",
+      "days_per_week": [
+        3,
+        6
+      ],
+      "experience": [
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/ppl.json",
+      "requires_opt_in": false,
+      "requires_training_max": false
+    },
+    {
+      "id": "phul",
+      "label_fa": "قدرت و حجم | PHUL",
+      "description_fa": "دو روز قدرت و دو روز عضله‌سازی برای ورزشکار باتجربه.",
+      "days_per_week": [
+        4
+      ],
+      "experience": [
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/phul.json",
+      "requires_opt_in": false,
+      "requires_training_max": false
+    },
+    {
+      "id": "wendler_531",
+      "label_fa": "قدرت دوره‌ای | 5/3/1",
+      "description_fa": "الگوی الهام‌گرفته از 5/3/1 با Training Max و پیشرفت تدریجی.",
+      "days_per_week": [
+        4
+      ],
+      "experience": [
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/wendler_531.json",
+      "requires_opt_in": false,
+      "requires_training_max": true
+    },
+    {
+      "id": "gvt",
+      "label_fa": "حجم بالا | German Volume Training",
+      "description_fa": "پروتکل ده‌ست؛ انتخاب مشروط با نیاز ریکاوری زیاد.",
+      "days_per_week": [
+        3
+      ],
+      "experience": [
+        "advanced"
+      ],
+      "path": "methods/gvt.json",
+      "requires_opt_in": true,
+      "requires_training_max": false
+    },
+    {
+      "id": "atlas_adaptive",
+      "label_fa": "انتخاب هوشمند | Atlas Adaptive",
+      "description_fa": "انتخاب ساختار بر اساس هدف، تجربه، زمان و تجهیزات.",
+      "days_per_week": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "experience": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "path": "methods/atlas_adaptive.json",
+      "requires_opt_in": false,
+      "requires_training_max": false
+    }
+  ]
+}

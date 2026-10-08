@@ -1,0 +1,1752 @@
+{
+  "version": "1.0.0",
+  "sources": {
+    "acsm": {
+      "title": "ACSM: Progression models in resistance training for healthy adults (2009)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "type": "position_stand",
+      "scope": "اصول عمومی پیشرفت؛ تأیید یک برنامه اختصاصی Atlas نیست"
+    },
+    "nsca": {
+      "title": "NSCA: Determination of Resistance Training Frequency",
+      "url": "https://www.nsca.com/education/articles/kinetic-select/determination-of-resistance-training-frequency/",
+      "type": "professional_guidance",
+      "scope": "تواتر، ریکاوری و تقسیم بالاتنه/پایین‌تنه"
+    },
+    "phul": {
+      "title": "Brandon Campbell: Power Hypertrophy Upper Lower",
+      "url": "https://www.muscleandstrength.com/workouts/phul-workout",
+      "type": "author_program",
+      "scope": "ساختار چهارروزه PHUL؛ مقاله مربی، نه کارآزمایی متد"
+    },
+    "wendler": {
+      "title": "Jim Wendler: 5/3/1 for Hardgainers",
+      "url": "https://www.jimwendler.com/blogs/jimwendler-com/5-3-1-for-hardgainers",
+      "type": "author_program",
+      "scope": "اصول TM و درصدهای چرخه؛ نمونه Hardgainers، نه نسخه کامل کتاب"
+    },
+    "wendler_beginner": {
+      "title": "Jim Wendler: 5/3/1 for a Beginner",
+      "url": "https://www.jimwendler.com/blogs/jimwendler-com/101065094-5-3-1-for-a-beginner",
+      "type": "author_program",
+      "scope": "TM محافظه‌کارانه و کیفیت تکرار"
+    },
+    "gvt": {
+      "title": "Effects of a 12-Week Modified German Volume Training Program (2018)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5969184/",
+      "type": "pilot_trial",
+      "scope": "شرح GVT و مقایسه ۵ و ۱۰ ست؛ نمونه کوچک، بدون اثبات برتری ۱۰ ست"
+    }
+  },
+  "global_rules": {
+    "exercise_selection": [
+      "فقط exercise_id موجود در کتابخانه حرکات و سازگار با تجهیزات و محدودیت کاربر",
+      "حرکات اصلی پیش از کمکی‌ها؛ حرکات اصلی بین هفته‌ها ثابت بمانند",
+      "گرم‌کردن در شمار ست کاری محاسبه نشود"
+    ],
+    "effort": {
+      "default_rir": [
+        2,
+        3
+      ],
+      "meaning_fa": "تعداد تکرار باقیمانده با فرم صحیح؛ برآورد است، نه اندازه‌گیری قطعی",
+      "no_mandatory_failure": true
+    },
+    "progression": {
+      "type": "double_progression",
+      "rule_fa": "وقتی تمام ست‌ها در دو نوبت متوالی به سقف دامنه تکرار با RIR هدف و فرم صحیح رسیدند، کوچک‌ترین افزایش عملی بار اعمال شود؛ حدود ۲ تا ۵ درصد انتخاب پیش‌فرض Atlas است، نه قانون همه متدها.",
+      "plateau_fa": "با افت عملکرد یا ریکاوری، ابتدا بار/ست را کم کن؛ افزایش هفتگی اجباری ممنوع.",
+      "deload_fa": "در خستگی پایدار یا افت چندجلسه‌ای، ۵ تا ۷ روز حجم حدود ۳۰ تا ۵۰ درصد کمتر؛ سیاست Atlas، نه نسخه رسمی همه منابع."
+    },
+    "constraints": [
+      "زمان واقعی ست‌ها، استراحت و گرم‌کردن باید در زمان جلسه جا شود",
+      "درد با حرکت، محدودیت پزشکی و تجهیزات بر وفاداری به متد اولویت دارند",
+      "تعداد ایستگاه یا سوپرست اجباری نباید حجم یا شدت متد را مخدوش کند",
+      "هیچ درصد چربی یا تشخیص پزشکی از عکس تولید نشود"
+    ],
+    "claim_policy": "برتری قطعی، نتیجه تضمینی یا تأیید رسمی نویسنده برای Atlas ادعا نشود"
+  },
+  "methods": {
+    "full_body": {
+      "schema_version": "1.0",
+      "id": "full_body",
+      "version": "1.0.0",
+      "label_fa": "تمام‌بدن | Full Body",
+      "kind": "split",
+      "description_fa": "تمرین کل بدن در هر جلسه؛ مناسب شروع و زمان محدود.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          2,
+          3
+        ],
+        "experience": [
+          "beginner",
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "2": [
+          "full_a",
+          "rest",
+          "rest",
+          "full_b",
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "3": [
+          "full_a",
+          "rest",
+          "full_b",
+          "rest",
+          "full_a",
+          "rest",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "nsca",
+        "acsm"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "جلسات تمام‌بدن غیرمتوالی باشند",
+          "الگوهای زانو، لگن، فشار و کشش در هفته پوشش داده شوند",
+          "تکرار حرکات اصلی مجاز است؛ تنوع روزها اجباری نیست"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "جلسات تمام‌بدن غیرمتوالی باشند",
+        "الگوهای زانو، لگن، فشار و کشش در هفته پوشش داده شوند",
+        "تکرار حرکات اصلی مجاز است؛ تنوع روزها اجباری نیست"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "session_templates": [
+        {
+          "key": "full_a",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "knee_dominant",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "core",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "full_b",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "single_leg",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "core",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "upper_lower": {
+      "schema_version": "1.0",
+      "id": "upper_lower",
+      "version": "1.0.0",
+      "label_fa": "بالاتنه / پایین‌تنه | Upper Lower",
+      "kind": "split",
+      "description_fa": "تقسیم متعادل عضله‌سازی و قدرت در چهار جلسه.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          4
+        ],
+        "experience": [
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "4": [
+          "upper_a",
+          "lower_a",
+          "rest",
+          "upper_b",
+          "lower_b",
+          "rest",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "nsca",
+        "acsm"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "دو جلسه بالاتنه و دو جلسه پایین‌تنه",
+          "فشار و کشش بالاتنه و الگوهای زانو و لگن پایین‌تنه متعادل باشند"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "دو جلسه بالاتنه و دو جلسه پایین‌تنه",
+        "فشار و کشش بالاتنه و الگوهای زانو و لگن پایین‌تنه متعادل باشند"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "session_templates": [
+        {
+          "key": "upper_a",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "horizontal_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "arms",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lower_a",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "knee_dominant",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_flexion",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "calves",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "core",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "upper_b",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "vertical_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "incline_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "lateral_deltoid",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "arms",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lower_b",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "single_leg",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_extension",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "calves",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "core",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ppl": {
+      "schema_version": "1.0",
+      "id": "ppl",
+      "version": "1.0.0",
+      "label_fa": "فشاری / کششی / پا | PPL",
+      "kind": "split",
+      "description_fa": "تفکیک جلسات بر اساس الگوی حرکت؛ سه یا شش روز.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          3,
+          6
+        ],
+        "experience": [
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "3": [
+          "push",
+          "rest",
+          "pull",
+          "rest",
+          "legs",
+          "rest",
+          "rest"
+        ],
+        "6": [
+          "push",
+          "pull",
+          "legs",
+          "push",
+          "pull",
+          "legs",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "nsca",
+        "acsm"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "فشاری شامل سینه، سرشانه و پشت‌بازو؛ کششی شامل پشت و جلو‌بازو؛ پا شامل زانو و لگن",
+          "نسخه سه‌روزه هر بخش را یک بار و شش‌روزه دو بار در هفته پوشش می‌دهد",
+          "نسخه شش‌روزه همان حجم سه‌روزه را دو برابر نکند؛ ست هر جلسه با ریکاوری تنظیم شود"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "فشاری شامل سینه، سرشانه و پشت‌بازو؛ کششی شامل پشت و جلو‌بازو؛ پا شامل زانو و لگن",
+        "نسخه سه‌روزه هر بخش را یک بار و شش‌روزه دو بار در هفته پوشش می‌دهد",
+        "نسخه شش‌روزه همان حجم سه‌روزه را دو برابر نکند؛ ست هر جلسه با ریکاوری تنظیم شود"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "session_templates": [
+        {
+          "key": "push",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "horizontal_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "lateral_deltoid",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "triceps",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "pull",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "vertical_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "rear_deltoid",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "biceps",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "legs",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "knee_dominant",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_flexion",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "calves",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "core",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "phul": {
+      "schema_version": "1.0",
+      "id": "phul",
+      "version": "1.0.0",
+      "label_fa": "قدرت و حجم | PHUL",
+      "kind": "named_program",
+      "description_fa": "دو روز قدرت و دو روز عضله‌سازی برای ورزشکار باتجربه.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          4
+        ],
+        "experience": [
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "4": [
+          "upper_power",
+          "lower_power",
+          "rest",
+          "upper_hypertrophy",
+          "lower_hypertrophy",
+          "rest",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "phul",
+        "acsm"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "چهار جلسه با دو روز قدرت و دو روز هایپرتروفی",
+          "ست‌های سنگین و اصلی سوپرست نشوند",
+          "حداقل یک تکرار ذخیره؛ شروع از حجم کمتر",
+          "حرکات اصلی ثابت؛ جایگزینی هم‌الگو با ثبت تغییر"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "چهار جلسه با دو روز قدرت و دو روز هایپرتروفی",
+        "ست‌های سنگین و اصلی سوپرست نشوند",
+        "حداقل یک تکرار ذخیره؛ شروع از حجم کمتر",
+        "حرکات اصلی ثابت؛ جایگزینی هم‌الگو با ثبت تغییر"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "loading_rules": {
+        "power_main": {
+          "sets_range": [
+            3,
+            4
+          ],
+          "reps_range": [
+            3,
+            5
+          ],
+          "rest_seconds_range": [
+            180,
+            300
+          ]
+        },
+        "hypertrophy": {
+          "sets_range": [
+            2,
+            4
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        "accessories": {
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            10,
+            15
+          ],
+          "rest_seconds_range": [
+            60,
+            120
+          ]
+        }
+      },
+      "session_templates": [
+        {
+          "key": "upper_power",
+          "focus": "power",
+          "slots": [
+            {
+              "pattern": "horizontal_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "vertical_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "arms",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lower_power",
+          "focus": "power",
+          "slots": [
+            {
+              "pattern": "knee_dominant",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "hip_hinge",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_flexion",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "calves",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "upper_hypertrophy",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "incline_push",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "horizontal_pull",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "lateral_deltoid",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "arms",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lower_hypertrophy",
+          "focus": "hypertrophy",
+          "slots": [
+            {
+              "pattern": "knee_dominant",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "single_leg",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_extension",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "knee_flexion",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            },
+            {
+              "pattern": "calves",
+              "sets_range": [
+                2,
+                3
+              ],
+              "reps_range": [
+                8,
+                12
+              ],
+              "rest_seconds_range": [
+                90,
+                180
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wendler_531": {
+      "schema_version": "1.0",
+      "id": "wendler_531",
+      "version": "1.0.0",
+      "label_fa": "قدرت دوره‌ای | 5/3/1",
+      "kind": "named_system",
+      "description_fa": "الگوی الهام‌گرفته از 5/3/1 با Training Max و پیشرفت تدریجی.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          4
+        ],
+        "experience": [
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "4": [
+          "squat",
+          "bench_press",
+          "rest",
+          "deadlift",
+          "overhead_press",
+          "rest",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "wendler",
+        "wendler_beginner"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "درصدها از TM حساب شوند، نه مستقیم از 1RM",
+          "برای هر چهار حرکت اصلی TM جداگانه و معتبر لازم است",
+          "ست اصلی سوپرست نشود؛ فرم و سرعت تکرار بر افزایش بار اولویت دارند",
+          "این نسخه Atlas با 5s PRO است؛ با چرخه کلاسیک ۵/۳/۱ یا همه نسخه‌های کتاب مخلوط نشود"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "درصدها از TM حساب شوند، نه مستقیم از 1RM",
+        "برای هر چهار حرکت اصلی TM جداگانه و معتبر لازم است",
+        "ست اصلی سوپرست نشود؛ فرم و سرعت تکرار بر افزایش بار اولویت دارند",
+        "این نسخه Atlas با 5s PRO است؛ با چرخه کلاسیک ۵/۳/۱ یا همه نسخه‌های کتاب مخلوط نشود"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "variant": "atlas_5s_pro_inspired",
+      "required_inputs": [
+        "training_max_kg.squat",
+        "training_max_kg.bench_press",
+        "training_max_kg.deadlift",
+        "training_max_kg.overhead_press"
+      ],
+      "training_max_policy": {
+        "estimated_1rm_fraction": 0.85,
+        "origin": "سیاست محافظه‌کارانه Atlas مبتنی بر مقاله beginner؛ عدد TM باید با سابقه واقعی بار تأیید شود",
+        "missing_action": "needs_input",
+        "never_infer_from_photo_or_bodyweight": true
+      },
+      "cycle": {
+        "weeks": [
+          {
+            "week": 1,
+            "percent_tm": [
+              65,
+              75,
+              85
+            ],
+            "reps": [
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "week": 2,
+            "percent_tm": [
+              70,
+              80,
+              90
+            ],
+            "reps": [
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "week": 3,
+            "percent_tm": [
+              75,
+              85,
+              95
+            ],
+            "reps": [
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "week": 4,
+            "percent_tm": [
+              40,
+              50,
+              60
+            ],
+            "reps": [
+              5,
+              5,
+              5
+            ],
+            "purpose": "atlas_deload"
+          }
+        ],
+        "origin": "Atlas uses a fixed-five variant, no PR sets; week 4 deload is Atlas policy, not a claim about current Forever scheduling",
+        "increase_tm_kg": {
+          "upper": 2.5,
+          "lower": 5,
+          "condition": "فقط در صورت کامل شدن ست‌ها با فرم خوب و ریکاوری؛ در غیر این صورت ثابت یا کاهش"
+        }
+      },
+      "loading_rules": {
+        "main_rest_seconds_range": [
+          180,
+          300
+        ],
+        "accessory_sets_range": [
+          2,
+          3
+        ],
+        "accessory_reps_range": [
+          8,
+          15
+        ]
+      },
+      "accessories_policy": "۲ تا ۴ حرکت کمکی فشار/کشش/تک‌پا یا مرکزی با توجه به روز؛ حجم برنامه Hardgainers کپی نشود."
+    },
+    "gvt": {
+      "schema_version": "1.0",
+      "id": "gvt",
+      "version": "1.0.0",
+      "label_fa": "حجم بالا | German Volume Training",
+      "kind": "high_volume_protocol",
+      "description_fa": "پروتکل ده‌ست؛ انتخاب مشروط با نیاز ریکاوری زیاد.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          3
+        ],
+        "experience": [
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {
+        "3": [
+          "chest_back",
+          "rest",
+          "legs",
+          "rest",
+          "shoulders_arms",
+          "rest",
+          "rest"
+        ]
+      },
+      "source_ids": [
+        "gvt"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "بلوک اصلی ۱۰ ست ۱۰ تکراری برای حرکت منتخب؛ نه برای همه حرکات",
+          "اگر به علت محدودیت حجم اصلی کاهش یافت، خروجی باید adapted باشد",
+          "GVT نسبت به حجم کمتر برتری اثبات‌شده ندارد؛ انتخاب خودکار پیش‌فرض ممنوع",
+          "عدم تکمیل تکرار با فرم صحیح موجب بازبینی بار یا توقف می‌شود؛ ناتوانی اجباری ممنوع"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "بلوک اصلی ۱۰ ست ۱۰ تکراری برای حرکت منتخب؛ نه برای همه حرکات",
+        "اگر به علت محدودیت حجم اصلی کاهش یافت، خروجی باید adapted باشد",
+        "GVT نسبت به حجم کمتر برتری اثبات‌شده ندارد؛ انتخاب خودکار پیش‌فرض ممنوع",
+        "عدم تکمیل تکرار با فرم صحیح موجب بازبینی بار یا توقف می‌شود؛ ناتوانی اجباری ممنوع"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "selection_gate": {
+        "explicit_opt_in": true,
+        "require_adequate_recovery": true,
+        "active_pain_or_low_recovery_action": "incompatible",
+        "automatic_selection": false
+      },
+      "loading_rules": {
+        "main_sets": 10,
+        "main_reps": 10,
+        "initial_load_percent_estimated_1rm": 60,
+        "rest_seconds_range": [
+          60,
+          90
+        ],
+        "accessory_sets_range": [
+          2,
+          3
+        ],
+        "accessory_reps_range": [
+          10,
+          15
+        ]
+      },
+      "atlas_variant": "یک حرکت ۱۰×۱۰ در هر جلسه و حرکات کمکی محدود؛ تعدیل Atlas، نه بازتولید کامل نمونه دوحرکتی تاریخی",
+      "time_policy": "زمان ۱۰ ست و استراحت را قبل از اجازه انتخاب محاسبه کن؛ زمان کم به معنی افزایش سرعت یا حذف استراحت نیست",
+      "progression_override": "پس از کامل شدن همه ۱۰ ست با فرم خوب و ریکاوری، کوچک‌ترین افزایش بار؛ افت کیفیت => کاهش بار یا تغییر متد با انتخاب کاربر."
+    },
+    "atlas_adaptive": {
+      "schema_version": "1.0",
+      "id": "atlas_adaptive",
+      "version": "1.0.0",
+      "label_fa": "انتخاب هوشمند | Atlas Adaptive",
+      "kind": "atlas_selector",
+      "description_fa": "انتخاب ساختار بر اساس هدف، تجربه، زمان و تجهیزات.",
+      "enabled": true,
+      "suitability": {
+        "days_per_week": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "experience": [
+          "beginner",
+          "intermediate",
+          "advanced"
+        ],
+        "goals": [
+          "hypertrophy",
+          "strength"
+        ]
+      },
+      "schedule_variants": {},
+      "source_ids": [
+        "nsca",
+        "acsm"
+      ],
+      "provenance": {
+        "reference_principles_fa": [
+          "متد حل‌شده و علت انتخاب ذخیره و نمایش داده شوند",
+          "GVT به صورت خودکار انتخاب نشود",
+          "TM نامعلوم => 5/3/1 انتخاب نشود",
+          "روز پنجم و ششم به معنی الزام حجم سنگین بیشتر نیست"
+        ],
+        "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+      },
+      "global_rules_file": "global-rules.json",
+      "hard_rules_fa": [
+        "متد حل‌شده و علت انتخاب ذخیره و نمایش داده شوند",
+        "GVT به صورت خودکار انتخاب نشود",
+        "TM نامعلوم => 5/3/1 انتخاب نشود",
+        "روز پنجم و ششم به معنی الزام حجم سنگین بیشتر نیست"
+      ],
+      "mismatch_policy": {
+        "action": "return_incompatible",
+        "suggest": "atlas_adaptive",
+        "silent_switch": false,
+        "allow_adapted_only_with_explicit_choice": true
+      },
+      "metadata_required": [
+        "requested_method",
+        "resolved_method",
+        "method_version",
+        "variant",
+        "adapted",
+        "adaptations",
+        "source_ids"
+      ],
+      "selection_policy": [
+        {
+          "when": "days in [2,3]",
+          "choose": "full_body"
+        },
+        {
+          "when": "days == 4 and goal == strength_hypertrophy and experience != beginner and recovery == adequate",
+          "choose": "phul"
+        },
+        {
+          "when": "days == 4 otherwise",
+          "choose": "upper_lower"
+        },
+        {
+          "when": "days == 6 and experience != beginner and recovery == adequate",
+          "choose": "ppl"
+        },
+        {
+          "when": "days == 5",
+          "choose": "atlas_custom",
+          "schedule": [
+            "upper_a",
+            "lower_a",
+            "rest",
+            "upper_b",
+            "lower_b",
+            "light_accessories",
+            "rest"
+          ]
+        },
+        {
+          "when": "beginner or low_recovery with >3 days",
+          "choose": "atlas_custom",
+          "rule": "۲ تا ۳ روز مقاومت تمام‌بدن؛ بقیه روزهای انتخاب‌شده سبک، هوازی یا موبیلیتی با برچسب روشن"
+        }
+      ],
+      "custom_rules": "اسلات‌ها و بارگذاری از full_body یا upper_lower؛ جلسه سبک ۱ تا ۲ ست، RIR حداقل ۴، بدون تکرار سنگین عضلات خسته؛ این ساختار اختصاصی Atlas است."
+    }
+  }
+}
