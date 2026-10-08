@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "id": "atlas_adaptive",
+  "version": "1.0.0",
+  "label_fa": "انتخاب هوشمند | Atlas Adaptive",
+  "kind": "atlas_selector",
+  "description_fa": "انتخاب ساختار بر اساس هدف، تجربه، زمان و تجهیزات.",
+  "enabled": true,
+  "suitability": {
+    "days_per_week": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "experience": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "goals": [
+      "hypertrophy",
+      "strength"
+    ]
+  },
+  "schedule_variants": {},
+  "source_ids": [
+    "nsca",
+    "acsm"
+  ],
+  "provenance": {
+    "reference_principles_fa": [
+      "متد حل‌شده و علت انتخاب ذخیره و نمایش داده شوند",
+      "GVT به صورت خودکار انتخاب نشود",
+      "TM نامعلوم => 5/3/1 انتخاب نشود",
+      "روز پنجم و ششم به معنی الزام حجم سنگین بیشتر نیست"
+    ],
+    "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+  },
+  "global_rules_file": "global-rules.json",
+  "hard_rules_fa": [
+    "متد حل‌شده و علت انتخاب ذخیره و نمایش داده شوند",
+    "GVT به صورت خودکار انتخاب نشود",
+    "TM نامعلوم => 5/3/1 انتخاب نشود",
+    "روز پنجم و ششم به معنی الزام حجم سنگین بیشتر نیست"
+  ],
+  "mismatch_policy": {
+    "action": "return_incompatible",
+    "suggest": "atlas_adaptive",
+    "silent_switch": false,
+    "allow_adapted_only_with_explicit_choice": true
+  },
+  "metadata_required": [
+    "requested_method",
+    "resolved_method",
+    "method_version",
+    "variant",
+    "adapted",
+    "adaptations",
+    "source_ids"
+  ],
+  "selection_policy": [
+    {
+      "when": "days in [2,3]",
+      "choose": "full_body"
+    },
+    {
+      "when": "days == 4 and goal == strength_hypertrophy and experience != beginner and recovery == adequate",
+      "choose": "phul"
+    },
+    {
+      "when": "days == 4 otherwise",
+      "choose": "upper_lower"
+    },
+    {
+      "when": "days == 6 and experience != beginner and recovery == adequate",
+      "choose": "ppl"
+    },
+    {
+      "when": "days == 5",
+      "choose": "atlas_custom",
+      "schedule": [
+        "upper_a",
+        "lower_a",
+        "rest",
+        "upper_b",
+        "lower_b",
+        "light_accessories",
+        "rest"
+      ]
+    },
+    {
+      "when": "beginner or low_recovery with >3 days",
+      "choose": "atlas_custom",
+      "rule": "۲ تا ۳ روز مقاومت تمام‌بدن؛ بقیه روزهای انتخاب‌شده سبک، هوازی یا موبیلیتی با برچسب روشن"
+    }
+  ],
+  "custom_rules": "اسلات‌ها و بارگذاری از full_body یا upper_lower؛ جلسه سبک ۱ تا ۲ ست، RIR حداقل ۴، بدون تکرار سنگین عضلات خسته؛ این ساختار اختصاصی Atlas است."
+}

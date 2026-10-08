@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "full_body",
+  "version": "1.0.0",
+  "label_fa": "تمام‌بدن | Full Body",
+  "kind": "split",
+  "description_fa": "تمرین کل بدن در هر جلسه؛ مناسب شروع و زمان محدود.",
+  "enabled": true,
+  "suitability": {
+    "days_per_week": [
+      2,
+      3
+    ],
+    "experience": [
+      "beginner",
+      "intermediate",
+      "advanced"
+    ],
+    "goals": [
+      "hypertrophy",
+      "strength"
+    ]
+  },
+  "schedule_variants": {
+    "2": [
+      "full_a",
+      "rest",
+      "rest",
+      "full_b",
+      "rest",
+      "rest",
+      "rest"
+    ],
+    "3": [
+      "full_a",
+      "rest",
+      "full_b",
+      "rest",
+      "full_a",
+      "rest",
+      "rest"
+    ]
+  },
+  "source_ids": [
+    "nsca",
+    "acsm"
+  ],
+  "provenance": {
+    "reference_principles_fa": [
+      "جلسات تمام‌بدن غیرمتوالی باشند",
+      "الگوهای زانو، لگن، فشار و کشش در هفته پوشش داده شوند",
+      "تکرار حرکات اصلی مجاز است؛ تنوع روزها اجباری نیست"
+    ],
+    "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+  },
+  "global_rules_file": "global-rules.json",
+  "hard_rules_fa": [
+    "جلسات تمام‌بدن غیرمتوالی باشند",
+    "الگوهای زانو، لگن، فشار و کشش در هفته پوشش داده شوند",
+    "تکرار حرکات اصلی مجاز است؛ تنوع روزها اجباری نیست"
+  ],
+  "mismatch_policy": {
+    "action": "return_incompatible",
+    "suggest": "atlas_adaptive",
+    "silent_switch": false,
+    "allow_adapted_only_with_explicit_choice": true
+  },
+  "metadata_required": [
+    "requested_method",
+    "resolved_method",
+    "method_version",
+    "variant",
+    "adapted",
+    "adaptations",
+    "source_ids"
+  ],
+  "session_templates": [
+    {
+      "key": "full_a",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "knee_dominant",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "horizontal_push",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "horizontal_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "hip_hinge",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "core",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "key": "full_b",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "hip_hinge",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "vertical_push",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "vertical_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "single_leg",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "core",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    }
+  ]
+}

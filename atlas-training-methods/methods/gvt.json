@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "id": "gvt",
+  "version": "1.0.0",
+  "label_fa": "حجم بالا | German Volume Training",
+  "kind": "high_volume_protocol",
+  "description_fa": "پروتکل ده‌ست؛ انتخاب مشروط با نیاز ریکاوری زیاد.",
+  "enabled": true,
+  "suitability": {
+    "days_per_week": [
+      3
+    ],
+    "experience": [
+      "advanced"
+    ],
+    "goals": [
+      "hypertrophy",
+      "strength"
+    ]
+  },
+  "schedule_variants": {
+    "3": [
+      "chest_back",
+      "rest",
+      "legs",
+      "rest",
+      "shoulders_arms",
+      "rest",
+      "rest"
+    ]
+  },
+  "source_ids": [
+    "gvt"
+  ],
+  "provenance": {
+    "reference_principles_fa": [
+      "بلوک اصلی ۱۰ ست ۱۰ تکراری برای حرکت منتخب؛ نه برای همه حرکات",
+      "اگر به علت محدودیت حجم اصلی کاهش یافت، خروجی باید adapted باشد",
+      "GVT نسبت به حجم کمتر برتری اثبات‌شده ندارد؛ انتخاب خودکار پیش‌فرض ممنوع",
+      "عدم تکمیل تکرار با فرم صحیح موجب بازبینی بار یا توقف می‌شود؛ ناتوانی اجباری ممنوع"
+    ],
+    "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+  },
+  "global_rules_file": "global-rules.json",
+  "hard_rules_fa": [
+    "بلوک اصلی ۱۰ ست ۱۰ تکراری برای حرکت منتخب؛ نه برای همه حرکات",
+    "اگر به علت محدودیت حجم اصلی کاهش یافت، خروجی باید adapted باشد",
+    "GVT نسبت به حجم کمتر برتری اثبات‌شده ندارد؛ انتخاب خودکار پیش‌فرض ممنوع",
+    "عدم تکمیل تکرار با فرم صحیح موجب بازبینی بار یا توقف می‌شود؛ ناتوانی اجباری ممنوع"
+  ],
+  "mismatch_policy": {
+    "action": "return_incompatible",
+    "suggest": "atlas_adaptive",
+    "silent_switch": false,
+    "allow_adapted_only_with_explicit_choice": true
+  },
+  "metadata_required": [
+    "requested_method",
+    "resolved_method",
+    "method_version",
+    "variant",
+    "adapted",
+    "adaptations",
+    "source_ids"
+  ],
+  "selection_gate": {
+    "explicit_opt_in": true,
+    "require_adequate_recovery": true,
+    "active_pain_or_low_recovery_action": "incompatible",
+    "automatic_selection": false
+  },
+  "loading_rules": {
+    "main_sets": 10,
+    "main_reps": 10,
+    "initial_load_percent_estimated_1rm": 60,
+    "rest_seconds_range": [
+      60,
+      90
+    ],
+    "accessory_sets_range": [
+      2,
+      3
+    ],
+    "accessory_reps_range": [
+      10,
+      15
+    ]
+  },
+  "atlas_variant": "یک حرکت ۱۰×۱۰ در هر جلسه و حرکات کمکی محدود؛ تعدیل Atlas، نه بازتولید کامل نمونه دوحرکتی تاریخی",
+  "time_policy": "زمان ۱۰ ست و استراحت را قبل از اجازه انتخاب محاسبه کن؛ زمان کم به معنی افزایش سرعت یا حذف استراحت نیست",
+  "progression_override": "پس از کامل شدن همه ۱۰ ست با فرم خوب و ریکاوری، کوچک‌ترین افزایش بار؛ افت کیفیت => کاهش بار یا تغییر متد با انتخاب کاربر."
+}

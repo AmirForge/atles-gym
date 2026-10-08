@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "id": "upper_lower",
+  "version": "1.0.0",
+  "label_fa": "بالاتنه / پایین‌تنه | Upper Lower",
+  "kind": "split",
+  "description_fa": "تقسیم متعادل عضله‌سازی و قدرت در چهار جلسه.",
+  "enabled": true,
+  "suitability": {
+    "days_per_week": [
+      4
+    ],
+    "experience": [
+      "intermediate",
+      "advanced"
+    ],
+    "goals": [
+      "hypertrophy",
+      "strength"
+    ]
+  },
+  "schedule_variants": {
+    "4": [
+      "upper_a",
+      "lower_a",
+      "rest",
+      "upper_b",
+      "lower_b",
+      "rest",
+      "rest"
+    ]
+  },
+  "source_ids": [
+    "nsca",
+    "acsm"
+  ],
+  "provenance": {
+    "reference_principles_fa": [
+      "دو جلسه بالاتنه و دو جلسه پایین‌تنه",
+      "فشار و کشش بالاتنه و الگوهای زانو و لگن پایین‌تنه متعادل باشند"
+    ],
+    "atlas_policy_fa": "دامنه‌های عمومی ست/تکرار/استراحت، اسلات‌های نمونه، انتخاب سطح، ریکاوری و سازگاری روزها پیشنهاد پیاده‌سازی Atlas هستند؛ نسخه عیناً رسمی یا برنامه شخصی نهایی نیستند."
+  },
+  "global_rules_file": "global-rules.json",
+  "hard_rules_fa": [
+    "دو جلسه بالاتنه و دو جلسه پایین‌تنه",
+    "فشار و کشش بالاتنه و الگوهای زانو و لگن پایین‌تنه متعادل باشند"
+  ],
+  "mismatch_policy": {
+    "action": "return_incompatible",
+    "suggest": "atlas_adaptive",
+    "silent_switch": false,
+    "allow_adapted_only_with_explicit_choice": true
+  },
+  "metadata_required": [
+    "requested_method",
+    "resolved_method",
+    "method_version",
+    "variant",
+    "adapted",
+    "adaptations",
+    "source_ids"
+  ],
+  "session_templates": [
+    {
+      "key": "upper_a",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "horizontal_push",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "horizontal_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "vertical_push",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "vertical_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "arms",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lower_a",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "knee_dominant",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "hip_hinge",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "knee_flexion",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "calves",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "core",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "key": "upper_b",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "vertical_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "incline_push",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "horizontal_pull",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "lateral_deltoid",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "arms",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lower_b",
+      "focus": "hypertrophy",
+      "slots": [
+        {
+          "pattern": "hip_hinge",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "single_leg",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "knee_extension",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "calves",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        },
+        {
+          "pattern": "core",
+          "sets_range": [
+            2,
+            3
+          ],
+          "reps_range": [
+            8,
+            12
+          ],
+          "rest_seconds_range": [
+            90,
+            180
+          ]
+        }
+      ]
+    }
+  ]
+}
